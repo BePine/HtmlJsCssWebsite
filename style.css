@@ -17,18 +17,18 @@ body{
     background: #1f1d29;
     transition: 1s;
     position:absolute;
-    padding-bottom:3vh;
+    padding-bottom:5vh;
 }
 .after{
     margin-top: 8vh;
     margin-bottom: 8vh;
 }
 .article{
-    position:absolute;
+    position:relative;
     left:0;
     margin-top:5vh;
     padding-top:25vh;
-    padding-bottom:10vh;
+    padding-bottom:5vh;
     min-height:60vh;
     width:100%;
     display:flex;
@@ -38,11 +38,12 @@ body{
     background-color: rgba(9, 9, 14, 0.3);
 }
 
-div.container{
+.container{
     position:relative;
     flex-basis:90%;
     margin:3vh;
     background: #131218;
+    overflow:clip;
 }
 
 .textBlocks{
@@ -57,30 +58,27 @@ div.container{
 
     
 }
-#first{
-    padding-top:20vh;
+
+#first > .textBlocks:first-child{
+    margin-top:20vh;
 }
 #first > .textBlocks{
     margin-left:8vh;
     margin-top:2vh;
 }
-#second{
-    padding-top:20vh;
-    
-}
+
 
 #second > .textBlocks{
     
-    margin-left:34vh;
+    margin-left:26vh;
     margin-top:2vh;
 
 }
 #second > .textBlocks:first-child{
     margin-top:10vh;
 }
-#third{
-    padding-top:10vh;
-    
+#third > .textBlocks:first-child {
+    margin-top: 40vh;
 }
 #third > .textBlocks{
     
@@ -89,7 +87,24 @@ div.container{
 
 }
 
-/* .hidden{
-    visibility:1;
-    size:1;
-} */
+.container.hidden{
+    height: 1vh;
+    opacity: 0;
+    transition: 1s;
+}
+
+.container.shown {
+    height:65vh;
+    opacity: 1;
+    transition: 1s;
+}
+.textBlocks.hidden {
+    height: 0.1vh;
+    opacity: 0;
+    transition: 1s;
+}
+.textBlocks.shown {
+    height: 2vh;
+    opacity: 1;
+    transition: 1s;
+}
