@@ -1,16 +1,95 @@
 *{
     padding:0;
     margin:0;
+
 }
 body{
-    background: #22212b;
+    background: #252331;
+    overflow-y:scroll;
+    min-height:130vh;
 }
+
 
 #main{
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+
     width: 100%;
-    height: 100vh;
-    background: #19181f;
+    min-height: 100vh;
+    background: #1f1d29;
+    transition: 1s;
+    position:absolute;
+    padding-bottom:3vh;
+}
+.after{
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+}
+.article{
+    position:absolute;
+    left:0;
+    margin-top:5vh;
+    padding-top:25vh;
+    padding-bottom:10vh;
+    min-height:60vh;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    flex: 3 3 3;
+    background-color: rgba(9, 9, 14, 0.3);
+}
+
+div.container{
+    position:relative;
+    flex-basis:90%;
+    margin:3vh;
+    background: #131218;
+}
+
+.textBlocks{
+    width:30%;
+    flex-basis:10%;
+    display:flex;
+    flex-direction: column;
+    background:whitesmoke;
+    height:2vh;
+    flex-flow:row;
+    position:relative;
+
+    
+}
+#first{
+    padding-top:20vh;
+}
+#first > .textBlocks{
+    margin-left:8vh;
+    margin-top:2vh;
+}
+#second{
+    padding-top:20vh;
+    
+}
+
+#second > .textBlocks{
+    
+    margin-left:34vh;
+    margin-top:2vh;
 
 }
+#second > .textBlocks:first-child{
+    margin-top:10vh;
+}
+#third{
+    padding-top:10vh;
+    
+}
+#third > .textBlocks{
+    
+    margin-left:8vh;
+    margin-top:2vh;
+
+}
+
+/* .hidden{
+    visibility:1;
+    size:1;
+} */
